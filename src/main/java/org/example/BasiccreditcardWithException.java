@@ -3,9 +3,9 @@ import java.util.*;
 import java.util.logging.*;
 class BasiccreditcardWithException implements Cloneable{
     String name;
-    int creditcardNumber;
+    long creditcardNumber;
     String expirationDate;
-    public BasiccreditcardWithException(String name, int creditcardNumber, String expirationDate){
+    public BasiccreditcardWithException(String name, long creditcardNumber, String expirationDate){
         this.name=name;
         this.creditcardNumber=creditcardNumber;
         this.expirationDate=expirationDate;
@@ -19,7 +19,7 @@ class BasiccreditcardWithException implements Cloneable{
         }
         return "false";
     }
-    public void compare(int credit){
+    public void compare(long credit){
         Logger l = Logger.getLogger("com.api.jar");
         if(creditcardNumber==credit){
             l.info("Both are same");
@@ -35,12 +35,12 @@ class BasiccreditcardWithException implements Cloneable{
             l.info("name:");
             String naMe = sc.nextLine();
             l.info("credit card number:");
-            int creditcardnumber = sc.nextInt();
+            long creditcardnumber = sc.nextLong();
             sc.nextLine();
             l.info("Expiry Date:");
             String expirationdate = sc.nextLine();
             l.info("Enter the new person credit card number:");
-            int c1 = sc.nextInt();
+            long c1 = sc.nextLong();
             l.info("checking whether two credit card numbers same or not");
             BasiccreditcardWithException ba = new BasiccreditcardWithException(naMe, creditcardnumber, expirationdate);
             ba.compare(c1);
