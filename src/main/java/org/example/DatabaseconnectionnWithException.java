@@ -5,7 +5,6 @@ class DatabaseconnectionnWithException{
     Logger l= Logger.getLogger("com.api.jar");
     static DatabaseconnectionnWithException st;
     String connection;
-    String connect;
     private DatabaseconnectionnWithException(String connection){
         this.connection=connection;
     }
